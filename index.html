@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Maturity Quiz - Lightly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <!-- Logo in top-left corner -->
+<div style="position: absolute; top: 20px; left: 20px; z-index: 10;">
+    <a href="https://lightly.ai/" target="_blank">
+        <img src="images/lightly_logo_light.svg" alt="Lightly" style="height: 40px; opacity: 0.9; cursor: pointer;">
+    </a>
+</div>
+    <div class="container">
+        <header>
+            <h1>ML Maturity Quiz</h1>
+            <p>Assess your organization's Machine Learning maturity level</p>
+        </header>
+
+        <div id="quiz-container">
+            <div id="question-container">
+                <div id="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+                
+                <div id="question-number">Question 1 of 10</div>
+                
+                <div id="question-text">
+                    How would you describe your organization's current approach to machine learning?
+                </div>
+                
+                <div id="answers-container">
+                    <button class="answer-btn" onclick="selectAnswer(0)">
+                        We're just starting to explore ML possibilities
+                    </button>
+                    <button class="answer-btn" onclick="selectAnswer(1)">
+                        We have some pilot ML projects running
+                    </button>
+                    <button class="answer-btn" onclick="selectAnswer(2)">
+                        We have ML models in production but limited scale
+                    </button>
+                    <button class="answer-btn" onclick="selectAnswer(3)">
+                        ML is integrated throughout our organization
+                    </button>
+                </div>
+                
+               <button id="back-btn" onclick="previousQuestion()" style="display: none;">Back</button>
+<button id="next-btn" onclick="nextQuestion()" style="display: none;">
+    Next Question
+</button>
+            </div>
+            
+            <div id="results-container" style="display: none;">
+                <div id="results-content">
+                    <!-- Results will be inserted here -->
+                </div>
+               <button onclick="restartQuiz()" style="background: linear-gradient(135deg, #016AC9, #3BD99F); color: white; border: none; padding: 15px 30px; border-radius: 8px; font-size: 1rem; cursor: pointer; margin-top: 30px; display: block;">Take Quiz Again</button>
+            </div>
+        </div>
+    </div>
+    <div class="button-wrapper">
+    <button id="back-btn" onclick="previousQuestion()" style="display: none;">Back</button>
+    <button id="next-btn" onclick="nextQuestion()" style="display: none;">Next Question</button>
+</div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
