@@ -145,6 +145,10 @@ header p {
 
 /* Mobile responsiveness improvements */
 @media (max-width: 768px) {
+     header {
+        margin-top: 60px !important; 
+        margin-bottom: 20px !important;
+    }
     body {
         padding: 5px;
     }
